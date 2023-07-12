@@ -1,3 +1,94 @@
 body {
-  background-color: bisque;
+  height: 100vh;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.todo__container {
+  width: auto;
+  border: 1px solid rgb(205 205 205);
+}
+
+.task__item,
+.add__input,
+.todo__title {
+  padding: 15px;
+  border: 1px solid rgb(205 205 205);
+  background-color: #f4f4f4;
+  display: flex;
+  gap: 10px;
+}
+
+.list__container {
+  width: 500px;
+}
+
+.btn__clear {
+  width: 100%;
+  padding: 20px;
+  font-size: 1rem;
+  background-color: #e9e7e7;
+  border: 1px solid rgb(205 205 205);
+  color: rgb(112, 108, 108);
+  cursor: pointer;
+}
+
+.todo__title {
+  display: flex;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.add__input {
+  display: inline;
+  width: 100%;
+}
+
+.points__img {
+  width: 16px;
+  margin-left: auto;
+  cursor: move;
+}
+
+.update__icon {
+  width: 18px;
+  height: auto;
+  margin-left: auto;
+  transform: rotate(295deg);
+}
+
+.enter__icon {
+  width: 25px;
+}
+
+.submit__btn {
+  position: absolute;
+  top: 16px;
+  right: 13px;
+  width: 28px;
+  cursor: pointer;
+  background: url('./assets/enter-icon.svg') no-repeat center center;
+  background-size: cover;
+  border: none;
+  color: transparent;
+}
+
+.input__container {
+  position: relative;
+  background-color: #f4f4f4;
 }
