@@ -1,13 +1,44 @@
-import _ from 'lodash';
 import './style.css';
+import points from './assets/point.png';
+import updateIcon from './assets/update-icon.svg';
 
-function component() {
-  const element = document.createElement('div');
+const iconUpdate = document.querySelector('.update__icon');
+iconUpdate.setAttribute('src', updateIcon);
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const toDoTask = [
+  {
+    description: 'task 1',
+    completed: true,
+    index: 2,
+  },
+  {
+    description: 'task 2',
+    completed: false,
+    index: 0,
+  },
+  {
+    description: 'task 3',
+    completed: true,
+    index: 1,
+  },
+];
 
-  return element;
-}
+const renderTodoList = () => {
+  const listContainer = document.querySelector('.list__container');
 
-document.body.appendChild(component());
+  const listSort = toDoTask.sort((a, b) => a.index - b.index);
+
+  listSort.forEach((task) => {
+    const listItem = document.createElement('li');
+    listItem.classList.add('task__item');
+
+    listItem.innerHTML = `
+    <input class="check__box" type="checkbox">
+    <p>${task.description}</p>
+    <img class="points__img" src=${points} alt="">
+    `;
+    listContainer.appendChild(listItem);
+  });
+};
+
+renderTodoList();
