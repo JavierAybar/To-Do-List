@@ -5,7 +5,7 @@ const addNewTask = (task) => {
   const newtask = {
     description: taskdescription,
     completed: false,
-    index: task.length,
+    index: task.length + 1,
   };
 
   task.push(newtask);

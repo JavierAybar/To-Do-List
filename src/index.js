@@ -2,7 +2,7 @@ import './style.css';
 import updateIcon from './assets/update-icon.svg';
 import renderTodoList from './modules/render_todo.js';
 import addNewTask from './modules/add_new_task.js';
-import { removeTask } from './modules/remove_task.js';
+import { removeTask, updateTaskIndexes } from './modules/remove_task.js';
 import { addImput, listContainer } from './modules/data.js';
 
 const iconUpdate = document.querySelector('.update__icon');
@@ -31,6 +31,7 @@ const clearAllCompTask = () => {
       const itemRemoved = checkbox.parentNode;
       const index = Array.from(itemRemoved.parentNode.children).indexOf(itemRemoved);
       listTasks = listTasks.filter((_, i) => i !== index);
+      updateTaskIndexes(listTasks);
       itemRemoved.remove();
     });
     localStorage.setItem('tasks', JSON.stringify(listTasks));
