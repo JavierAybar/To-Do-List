@@ -8,16 +8,14 @@
   <body>
     <div class="todo__container">
       <h2 class="todo__title">Today's To Do <img class="update__icon" src="" alt="update icon"></h2>
+        <form class="input__container">
+            <input class="add__input" type="text" placeholder="Add to your list...">
+            <input class="submit__btn" type="submit">
+        </form>
       <ul class="list__container">
-        <li>
-            <form class="input__container">
-                <input class="add__input" type="text" placeholder="Add to your list...">
-                <input class="submit__btn" type="submit">
-            </form>
-        </li>
       </ul>
       <button class="btn__clear">Clear all completed</button>
     </div>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
