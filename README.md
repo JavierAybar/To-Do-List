@@ -109,6 +109,13 @@ To run tests, run the following command:
   npx eslint . --fix
 ```
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+
+- You can visit the live demo [here](https://javieraybar.github.io/To-Do-List/dist/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
