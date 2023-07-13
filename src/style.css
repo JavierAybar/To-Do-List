@@ -61,7 +61,6 @@ li {
 
 .points__img {
   width: 16px;
-  margin-left: auto;
   cursor: move;
 }
 
@@ -91,4 +90,19 @@ li {
 .input__container {
   position: relative;
   background-color: #f4f4f4;
+}
+
+.trash__img {
+  width: 16px;
+  margin-left: auto;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.task__item:hover .trash__img {
+  opacity: unset;
+}
+
+.task__item:hover {
+  background-color: rgba(233, 208, 99, 0.377);
 }
