@@ -81,7 +81,7 @@ li {
   right: 13px;
   width: 28px;
   cursor: pointer;
-  background: url('./assets/enter-icon.svg') no-repeat center center;
+  background: url("./assets/enter-icon.svg") no-repeat center center;
   background-size: cover;
   border: none;
   color: transparent;
@@ -97,6 +97,10 @@ li {
   margin-left: auto;
   cursor: pointer;
   opacity: 0;
+}
+
+.line__check {
+  text-decoration: line-through;
 }
 
 .task__item:hover .trash__img {
