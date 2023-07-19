@@ -1,3 +1,4 @@
+jest.mock('./remove_task');
 import removeTask from '../__mocks__/remove_task.js';
 
 describe('removing task', () => {
