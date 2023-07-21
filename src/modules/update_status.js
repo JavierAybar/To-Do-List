@@ -1,4 +1,4 @@
-const prueba = (listTasks) => {
+const updateTaskList = (listTasks) => {
   const testcheck = document.querySelectorAll('.check__box');
 
   testcheck.forEach((checkbox) => {
@@ -19,4 +19,4 @@ const prueba = (listTasks) => {
     });
   });
 };
-export default prueba;
+export default updateTaskList;

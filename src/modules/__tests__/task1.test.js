@@ -1,11 +1,16 @@
-import addTask from '../../../test_functions/add_task.js';
+import addNewTask from '../add_new_task.js';
+
+jest.mock('../data.js', () => ({
+  addImput: {
+    value: 'new task',
+  },
+}));
 
 describe('add function', () => {
   test('add new task to the task list', () => {
     const task = [];
-    const taskdescription = 'newTask';
 
-    addTask(task, taskdescription);
+    addNewTask(task);
     expect(task).toHaveLength(1);
   });
 });
