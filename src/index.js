@@ -4,7 +4,7 @@ import renderTodoList from './modules/render_todo.js';
 import addNewTask from './modules/add_new_task.js';
 import { removeTask, updateTaskIndexes } from './modules/remove_task.js';
 import { addImput, listContainer } from './modules/data.js';
-import prueba from './modules/update_status.js';
+import updateTaskList from './modules/update_status.js';
 
 const iconUpdate = document.querySelector('.update__icon');
 iconUpdate.setAttribute('src', updateIcon);
@@ -20,6 +20,7 @@ btnSubmit.addEventListener('click', (event) => {
   addImput.value = '';
 
   renderTodoList(listTasks);
+  updateTaskList(listTasks);
   localStorage.setItem('tasks', JSON.stringify(listTasks));
 });
 
@@ -40,9 +41,6 @@ const clearAllCompTask = () => {
 };
 
 clearAllCompTask();
-
-// Remove task with trash-icon and update index
-removeTask(listTasks);
 
 // edit task when you click de input
 const editTask = () => {
@@ -66,4 +64,9 @@ const editTask = () => {
 editTask();
 
 // Update status checkbox complete
-prueba(listTasks);
+document.addEventListener('DOMContentLoaded', () => {
+  // update status to complete when the checkbox is checked
+  updateTaskList(listTasks);
+  // Remove task with trash-icon and update index
+  removeTask(listTasks);
+});
